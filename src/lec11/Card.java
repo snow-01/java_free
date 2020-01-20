@@ -12,4 +12,13 @@ public class Card {
     public void print(){
         System.out.println(this.mark + "の" + this.number);
     }
+
+    public int getNumber(){
+        return number;
+    }
+
+    public String getMark(){
+        return mark;
+    }
+
 }

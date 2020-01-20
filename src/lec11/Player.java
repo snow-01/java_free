@@ -1,19 +1,14 @@
 package lec11;
 
+import java.util.Scanner;
+
 public class Player {
-    private String playerName;
-    private int money;
-    private String[] hand;
+    public String playerName;
 
-    public Player(String playerName , String[] hand , int money){
+    public Player(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("プレイヤー名を入力してください");
+        String playerName = input.next();
         this.playerName = playerName;
-        this.money = money;
-        this.hand = hand;
-    }
-
-    public void print(){
-        System.out.println("プレイヤー名:" + playerName);
-        System.out.println("所持金:" + money + "$");
-        System.out.println("手札:" + hand);
     }
 }

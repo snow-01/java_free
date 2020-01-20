@@ -20,13 +20,6 @@ public class Deck {
         this.cardList = cardList;
     }
 
-    public void  printCardList(){
-        for (int i = 0 ; i < cardList.size() ; i++){
-            Card card =cardList.get(i);
-            card.print();
-        }
-    }
-
     public Card drowCard(int card){
         Card drow = cardList.get(card);
         cardList.remove(card);
