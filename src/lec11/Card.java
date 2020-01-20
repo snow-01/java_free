@@ -4,20 +4,20 @@ public class Card {
     private String mark;
     private int number;
 
-    public Card(String mark , int number){
+    public Card(String mark, int number) {
         this.mark = mark;
         this.number = number;
     }
 
-    public void print(){
+    public void print() {
         System.out.println(this.mark + "の" + this.number);
     }
 
-    public int getNumber(){
+    public int getNumber() {
         return number;
     }
 
-    public String getMark(){
+    public String getMark() {
         return mark;
     }
 

@@ -6,13 +6,13 @@ import java.util.Collections;
 public class Deck {
     private ArrayList<Card> cardList;
 
-    public Deck(){
-        String[] marks = new String[]{"ダイヤ","スペード","ハート","クローバー"};
+    public Deck() {
+        String[] marks = new String[]{"ダイヤ", "スペード", "ハート", "クローバー"};
         ArrayList<Card> cardList = new ArrayList<>();
-        for(int i = 0 ; i < marks.length ; i++){
+        for (int i = 0; i < marks.length; i++) {
             String mark = marks[i];
-            for (int j = 1 ; j <=13 ; j++){
-                Card card = new Card(mark , j);
+            for (int j = 1; j <= 13; j++) {
+                Card card = new Card(mark, j);
                 cardList.add(card);
             }
         }
@@ -20,7 +20,7 @@ public class Deck {
         this.cardList = cardList;
     }
 
-    public Card drowCard(int card){
+    public Card drowCard(int card) {
         Card drow = cardList.get(card);
         cardList.remove(card);
         return drow;

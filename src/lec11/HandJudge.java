@@ -3,7 +3,7 @@ package lec11;
 import java.util.*;
 
 public class HandJudge {
-    
+
     public HandJudge(ArrayList<Card> handList) {
 
         Map<Integer, Integer> count = new HashMap();

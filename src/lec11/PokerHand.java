@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
-public class PokerHand extends Player{
+public class PokerHand extends Player {
     Deck deck = new Deck();
     private ArrayList<Card> handList = new ArrayList<>();
 
@@ -24,7 +24,7 @@ public class PokerHand extends Player{
         System.out.println(playerName + "の交換後の手札");
         String changeCard[] = card.split(",");
         try {
-            if (parseInt(changeCard[0]) != 0){
+            if (parseInt(changeCard[0]) != 0) {
                 for (int i = changeCard.length; i > 0; i--) {
                     int removeCard = parseInt(changeCard[i - 1]) - 1;
                     handList.remove(removeCard);
@@ -34,7 +34,7 @@ public class PokerHand extends Player{
                     handList.add(drow);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("例外が発生しました、システムを終了します");
             return;
         }
@@ -42,7 +42,7 @@ public class PokerHand extends Player{
         new HandJudge(handList);
     }
 
-    public void handListPrint(){
+    public void handListPrint() {
         handList.sort(Comparator.comparing(Card::getNumber));
         for (int i = 0; i < 5; i++) {
             Card hand = handList.get(i);
